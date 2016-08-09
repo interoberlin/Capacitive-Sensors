@@ -1,0 +1,6 @@
+*.kicad_pcb: text
+*.pro: text
+*.sch: text
+*.lib: text
+*.png: binary
+*.jpg: binary
