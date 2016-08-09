@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/code/nRF51822/Capacitive-Sensors/Bodensensor-KiCAD/Bodensensor.sch</source>
+    <date>Di 09 Aug 2016 21:03:47 CEST</date>
+    <tool>Eeschema 4.0.2+dfsg1-2~bpo8+1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Bodensensor.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <libsource lib="device" part="C_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57AA223A</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>220K</value>
+      <libsource lib="device" part="R_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57AA2285</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>4046</value>
+      <libsource lib="cmos4000" part="4046"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57AA269A</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="cmos4000" part="4046">
+      <description>Phase Comp &amp; VCO</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4046</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PCP" type="output"/>
+        <pin num="2" name="PC1" type="output"/>
+        <pin num="3" name="SigIn" type="input"/>
+        <pin num="4" name="FOUT" type="input"/>
+        <pin num="5" name="Inh" type="input"/>
+        <pin num="6" name="C1" type="input"/>
+        <pin num="7" name="C2" type="input"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="VCOin" type="input"/>
+        <pin num="10" name="SFout" type="output"/>
+        <pin num="11" name="R1" type="input"/>
+        <pin num="12" name="R2" type="input"/>
+        <pin num="13" name="PC2" type="3state"/>
+        <pin num="14" name="RefIn" type="input"/>
+        <pin num="15" name="ZOUT" type="output"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C_Small">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R_Small">
+      <description>Resistor</description>
+      <footprints>
+        <fp>Resistor_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="cmos4000">
+      <uri>/usr/share/kicad/library/cmos4000.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(IC1-Pad11)">
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="2" name="+3V3">
+      <node ref="C1" pin="1"/>
+      <node ref="IC1" pin="16"/>
+    </net>
+    <net code="3" name="Net-(IC1-Pad2)">
+      <node ref="IC1" pin="2"/>
+    </net>
+    <net code="4" name="Net-(IC1-Pad13)">
+      <node ref="IC1" pin="13"/>
+    </net>
+    <net code="5" name="Net-(IC1-Pad9)">
+      <node ref="IC1" pin="9"/>
+    </net>
+    <net code="6" name="Net-(IC1-Pad1)">
+      <node ref="IC1" pin="1"/>
+    </net>
+    <net code="7" name="Net-(IC1-Pad10)">
+      <node ref="IC1" pin="10"/>
+    </net>
+    <net code="8" name="Net-(IC1-Pad15)">
+      <node ref="IC1" pin="15"/>
+    </net>
+    <net code="9" name="Net-(IC1-Pad3)">
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="10" name="Net-(IC1-Pad14)">
+      <node ref="IC1" pin="14"/>
+    </net>
+    <net code="11" name="GND">
+      <node ref="IC1" pin="8"/>
+      <node ref="IC1" pin="5"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="12" name="OUT">
+      <node ref="IC1" pin="4"/>
+    </net>
+    <net code="13" name="CA">
+      <node ref="IC1" pin="6"/>
+    </net>
+    <net code="14" name="CB">
+      <node ref="IC1" pin="7"/>
+    </net>
+    <net code="15" name="Net-(IC1-Pad12)">
+      <node ref="IC1" pin="12"/>
+      <node ref="R1" pin="1"/>
+    </net>
+  </nets>
+</export>
