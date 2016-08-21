@@ -1,0 +1,15 @@
+*.SchLib: binary
+*.PcbLib: binary
+*.SchDoc: binary
+*.PcbDoc: binary
+*.PrjPCB: binary
+*.PCB: binary
+*.jpg: binary
+*.GM1: text
+*.GM3: text
+*.GM13: text
+*.GM15: text
+*.GTL: text
+*.GBL: text
+*.GKO: text
+*.TXT: text
